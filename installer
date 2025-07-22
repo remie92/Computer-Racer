@@ -25,12 +25,14 @@ commands={
 "wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/startup.lua startup.lua",
 }
 
-function downloadFile(index)
-  print("Downloading "..index.."/"..#commands)
+currIndex=1
+function downloadFile()
+  print("Downloading "..currIndex.."/"..#commands)
   shell.run(commands[index])
 end
 
 for i=1,#commands do
+currIndex=i
 local success = false
   while not success do
     success, err = pcall(downloadFile)
