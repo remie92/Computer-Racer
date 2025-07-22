@@ -288,7 +288,7 @@ local function handleGameLogic(dt)
   vec:normalize()
   smokeX = vec.x*2    
   smokeZ = vec.y*2    
-    objects[2+currentSmoke]:setPos(carX+smokeX, math.sin(os.clock())*0.2, carZ+smokeZ)
+    objects[2+currentSmoke]:setPos(carX+smokeX, math.sin(os.clock())*0.2+carY, carZ+smokeZ)
 
 
 
