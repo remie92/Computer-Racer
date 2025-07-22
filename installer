@@ -1,0 +1,36 @@
+commands={
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/blankplane models/blankplane",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/car models/car",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/car2 models/car2",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/car3 models/car3",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/car4 models/car4",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/car5 models/car5",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/car6 models/car6",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/checkpoint models/checkpoint",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/checkpointPath models/checkpointPath",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/numbers models/numbers",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/path2 models/path2",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/path3 models/path3",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/path4 models/path4",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/path5 models/path5",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/plane models/plane",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/shadow models/shadow",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/smoke models/smoke",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/Mountains.lua Mountains.lua",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/Pine3D.lua Pine3D.lua",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/betterblittle.lua betterblittle.lua",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/bitmap.lua bitmap.lua",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/bmpConverter.lua bmpConverter.lua",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/objLoader.lua objLoader.lua",
+"wget https://raw.githubusercontent.com/remie92/Computer-Racer/refs/heads/main/startup.lua startup.lua",
+}
+
+for i=1,#commands do
+  shell.run(commands[i])
+  print("Downloading "..i.."/"..#commands)
+  sleep(1)
+  
+end
+print("Everything is downloaded! Rebooting now!")
+sleep(3)
+shell.run("reboot")
