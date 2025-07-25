@@ -4,7 +4,7 @@ print("Welcome to the PineJam Car Game! (I need a better name....)")
 print()
 print("To play, setup the options first! The first one will appear under this text.")
 print()
-print("Controls: Arrow Keys to move, Space to jump.")
+print("Controls: Arrow Keys/WASD to move, Space to jump.")
 print()
 print("Texured Plane? (y/n) (Default: No)")
 planeYN=read()
@@ -347,20 +347,20 @@ end
     end
 
 
-      if keysDown[keys.left] then
+      if keysDown[keys.left] or keysDown[keys.a] then
     carYaw = (carYaw + turnSpeed * dt) % 360
   end
-  if keysDown[keys.right] then
+  if keysDown[keys.right] or keysDown[keys.d] then
     carYaw = (carYaw - turnSpeed * dt) % 360
   end
 
   updateCameraYaw(dt)
 
-    if keysDown[keys.up] and carY==0 then
+    if keysDown[keys.up] or keysDown[keys.w] and carY==0 then
     carVel =carVel - speed * dt
   end
 
-    if keysDown[keys.down]and carY==0 then
+    if keysDown[keys.down] or keysDown[keys.s]and carY==0 then
         carVel = carVel + speed * dt
     end
 
